@@ -1,0 +1,475 @@
+---
+import ArticleLayout from '../../layouts/ArticleLayout.astro';
+import SafetyCallout from '../../components/SafetyCallout.astro';
+import ScriptBlock from '../../components/ScriptBlock.astro';
+---
+
+<ArticleLayout 
+  title="Digital Safety & Surveillance"
+  description="How to recognize technology-facilitated abuse and protect your digital privacy"
+  category="Tools"
+  readTime="14 min"
+  lastUpdated="December 2025"
+>
+  <SafetyCallout type="safety">
+    <strong>Critical Warning:</strong> If you believe someone is monitoring your devices, <strong>do not search for help on those devices</strong>. Use a library computer, a trusted friend's phone, or contact a helpline by calling from a different phone. Clearing your history may alert a tech-savvy person that you're aware of monitoring.
+  </SafetyCallout>
+
+  <h2>What Is Technology-Facilitated Abuse?</h2>
+  
+  <p>Technology-facilitated abuse uses digital tools to control, monitor, harass, or intimidate someone. Research indicates that 97% of domestic violence programs report their clients experience technology-facilitated abuse. This form of abuse is often invisible and can make victims feel like they're "going crazy" when their privacy is violated in ways they can't see or prove.</p>
+  
+  <p>Technology abuse includes:</p>
+  
+  <ul>
+    <li><strong>Surveillance:</strong> Tracking location, reading messages, monitoring activities</li>
+    <li><strong>Harassment:</strong> Constant texts/calls, threats via digital means, impersonation</li>
+    <li><strong>Control:</strong> Restricting device access, controlling accounts, changing passwords</li>
+    <li><strong>Exposure:</strong> Threatening to share private images/information</li>
+    <li><strong>Financial:</strong> Monitoring spending, blocking access to accounts</li>
+  </ul>
+
+  <h2>Common Monitoring Methods</h2>
+  
+  <div class="method-grid">
+    <div class="method-card">
+      <h4>📱 Spyware Apps</h4>
+      <p>Apps like mSpy, FlexiSpy, or "parental control" software can read texts, emails, calls, location, and more—often invisibly.</p>
+      <div class="method-signs">
+        <strong>Signs:</strong> Battery drains fast, phone runs hot, unexpected data usage, phone acts slow
+      </div>
+    </div>
+    
+    <div class="method-card">
+      <h4>📍 Location Sharing</h4>
+      <p>Find My iPhone, Find My Device, Life360, or shared Google accounts can reveal your location constantly.</p>
+      <div class="method-signs">
+        <strong>Signs:</strong> Partner always knows where you are, questions arise immediately when you're somewhere unexpected
+      </div>
+    </div>
+    
+    <div class="method-card">
+      <h4>🔑 Account Access</h4>
+      <p>Having your passwords, logged into your cloud backup, or recovery access to your accounts.</p>
+      <div class="method-signs">
+        <strong>Signs:</strong> Messages shown as "read" when you haven't read them, mentioned info you didn't share
+      </div>
+    </div>
+    
+    <div class="method-card">
+      <h4>🏠 Smart Home Devices</h4>
+      <p>Doorbell cameras, smart locks, thermostats, speakers, or cameras can all be used for surveillance and control.</p>
+      <div class="method-signs">
+        <strong>Signs:</strong> Partner references who visited, doors lock/unlock remotely, devices behave unexpectedly
+      </div>
+    </div>
+    
+    <div class="method-card">
+      <h4>🚗 Vehicle Tracking</h4>
+      <p>Hidden GPS trackers (small magnetic devices), car's built-in GPS, or connected car apps.</p>
+      <div class="method-signs">
+        <strong>Signs:</strong> Partner knows your exact routes, appears unexpectedly where you are
+      </div>
+    </div>
+    
+    <div class="method-card">
+      <h4>💳 Financial Monitoring</h4>
+      <p>Joint accounts, monitoring apps, transaction alerts, or access to your individual accounts.</p>
+      <div class="method-signs">
+        <strong>Signs:</strong> Questioned about every purchase, accused based on spending location/time
+      </div>
+    </div>
+  </div>
+
+  <h2>Warning Signs of Digital Monitoring</h2>
+  
+  <p>Consider whether your partner:</p>
+  
+  <ul class="checklist">
+    <li>Knows details about conversations you had when they weren't present</li>
+    <li>References information from your private emails or texts</li>
+    <li>Always seems to know exactly where you've been</li>
+    <li>Shows up unexpectedly at locations you didn't tell them about</li>
+    <li>Asks about people in your contacts or recent calls</li>
+    <li>Accuses you based on things they shouldn't know</li>
+    <li>Insists on knowing all your passwords "for trust"</li>
+    <li>Requires location sharing "so they don't worry"</li>
+    <li>Gets angry when your phone is out of their sight</li>
+    <li>Has installed "family" or "security" apps on your phone</li>
+    <li>Set up your accounts or devices for you</li>
+  </ul>
+
+  <SafetyCallout type="warning">
+    <strong>Trust Your Instincts:</strong> If it feels like someone knows too much, they probably do. You're not paranoid—technology-facilitated abuse is common and designed to be hard to detect.
+  </SafetyCallout>
+
+  <h2>Assessing Your Device</h2>
+  
+  <p>Before making changes, understand what might be monitored. <strong>Be careful:</strong> Removing monitoring apps or changing passwords can alert the person and may escalate the situation. Consider your safety before taking action.</p>
+  
+  <div class="check-section">
+    <h4>📱 On iPhone</h4>
+    <ol>
+      <li><strong>Installed Apps:</strong> Settings → General → iPhone Storage (look for unfamiliar apps)</li>
+      <li><strong>Family Sharing:</strong> Settings → [Your Name] → Family Sharing</li>
+      <li><strong>Location Sharing:</strong> Settings → Privacy → Location Services → Share My Location</li>
+      <li><strong>Find My:</strong> Settings → [Your Name] → Find My</li>
+      <li><strong>Screen Time:</strong> Settings → Screen Time (can be used to monitor/restrict)</li>
+      <li><strong>Profile:</strong> Settings → General → VPN & Device Management (look for profiles)</li>
+    </ol>
+    
+    <h4 class="mt-lg">📱 On Android</h4>
+    <ol>
+      <li><strong>Apps:</strong> Settings → Apps → See All Apps (look for unfamiliar apps)</li>
+      <li><strong>Device Admin:</strong> Settings → Security → Device Admin Apps</li>
+      <li><strong>Location:</strong> Settings → Location → Location Sharing</li>
+      <li><strong>Google Account:</strong> Check who's logged into your Google account (can see location history)</li>
+      <li><strong>Accessibility:</strong> Settings → Accessibility (spyware often requires these permissions)</li>
+    </ol>
+  </div>
+
+  <h2>Creating a Safety Plan Before Acting</h2>
+  
+  <p>If you discover monitoring, <strong>don't immediately remove it</strong>. First:</p>
+  
+  <ol class="safety-steps">
+    <li><strong>Assess your safety:</strong> Will removing monitoring escalate danger?</li>
+    <li><strong>Document evidence:</strong> Screenshot anything that shows monitoring (store securely)</li>
+    <li><strong>Get support:</strong> Contact a domestic violence advocate who can help you plan</li>
+    <li><strong>Create a safe device:</strong> If possible, get an unmonitored phone before making changes</li>
+    <li><strong>Plan your actions:</strong> Have a support system in place before confronting or removing</li>
+  </ol>
+
+  <SafetyCallout type="info">
+    <strong>The National Domestic Violence Hotline</strong> (1-800-799-7233) has trained advocates who can help you navigate technology safety. They will not pressure you to leave and will support whatever decision you make.
+  </SafetyCallout>
+
+  <h2>Safe Communication Options</h2>
+  
+  <div class="comm-options">
+    <div class="comm-option">
+      <h5>📞 Safe Phone</h5>
+      <p>A prepaid phone purchased with cash, registered to a different name or not registered at all. Keep it somewhere your partner won't find it.</p>
+    </div>
+    <div class="comm-option">
+      <h5>🖥️ Library Computer</h5>
+      <p>Public library computers can be used to access email, research help, or contact services without leaving traces on your devices.</p>
+    </div>
+    <div class="comm-option">
+      <h5>📧 New Email Account</h5>
+      <p>Create a new email on a safe device. Use a name that doesn't identify you. Don't link it to your phone number.</p>
+    </div>
+    <div class="comm-option">
+      <h5>👥 Trusted Person</h5>
+      <p>Borrow a trusted friend or family member's phone to make calls or access accounts your partner might monitor.</p>
+    </div>
+    <div class="comm-option">
+      <h5>💬 Signal App</h5>
+      <p>Encrypted messaging that can be set to auto-delete. However, if your phone has spyware, even encrypted apps may be readable.</p>
+    </div>
+  </div>
+
+  <h2>Smart Home Safety</h2>
+  
+  <p>Smart home devices pose unique challenges because they may be controlled by whoever set them up:</p>
+  
+  <ul>
+    <li><strong>Cameras:</strong> Indoor cameras, doorbell cameras, baby monitors can all record and transmit</li>
+    <li><strong>Smart speakers:</strong> Can potentially record conversations</li>
+    <li><strong>Smart locks:</strong> Can be locked/unlocked remotely</li>
+    <li><strong>Thermostats/lights:</strong> Can be used to signal someone is watching</li>
+  </ul>
+  
+  <p><strong>If you're concerned:</strong></p>
+  <ul>
+    <li>Cover cameras with tape or a sliding cover</li>
+    <li>Unplug smart speakers when having private conversations</li>
+    <li>Note if devices behave strangely (lights change, locks click)</li>
+    <li>Document unusual device behavior</li>
+    <li>Know that factory resetting devices may require the original owner's credentials</li>
+  </ul>
+
+  <h2>Vehicle Safety</h2>
+  
+  <p>If you suspect a GPS tracker on your vehicle:</p>
+  
+  <ul>
+    <li><strong>Check common hiding spots:</strong> Under the car (magnetic trackers), in wheel wells, under seats, in the trunk, in the OBD port</li>
+    <li><strong>Connected cars:</strong> Many modern vehicles have built-in GPS. Check the car's app and who has access.</li>
+    <li><strong>Professional sweep:</strong> Some auto shops or private investigators can scan for trackers</li>
+    <li><strong>Consider timing:</strong> If you find and remove a tracker, the person will know you found it</li>
+  </ul>
+
+  <h2>Social Media & Online Presence</h2>
+  
+  <div class="social-safety">
+    <h4>Review Your Settings</h4>
+    <ul>
+      <li>Who can see your posts? Who can tag you?</li>
+      <li>Is location tagging enabled on photos?</li>
+      <li>Who has access to your accounts (active sessions)?</li>
+      <li>Are there apps connected to your accounts?</li>
+    </ul>
+    
+    <h4 class="mt-md">Be Aware Of</h4>
+    <ul>
+      <li>Friends/followers who might share information</li>
+      <li>Check-ins and location tags that reveal where you are</li>
+      <li>Photos that show your location (background details)</li>
+      <li>Event RSVPs that show your plans</li>
+    </ul>
+    
+    <h4 class="mt-md">Consider</h4>
+    <ul>
+      <li>Review follower lists for fake accounts</li>
+      <li>Enable login alerts/two-factor authentication</li>
+      <li>Log out all other sessions periodically</li>
+      <li>Be strategic about what you post and when</li>
+    </ul>
+  </div>
+
+  <h2>If You're Leaving</h2>
+  
+  <p>When preparing to leave a controlling relationship, digital safety becomes critical:</p>
+  
+  <div class="leaving-checklist">
+    <h4>Before You Leave</h4>
+    <ul>
+      <li>☐ Get a safe phone if possible</li>
+      <li>☐ Create new email accounts on safe devices</li>
+      <li>☐ Change passwords on essential accounts (bank, benefits) from a safe device</li>
+      <li>☐ Document evidence of monitoring/abuse securely</li>
+      <li>☐ Make copies of important documents (stored with trusted person)</li>
+      <li>☐ Contact a DV advocate for a safety plan</li>
+    </ul>
+    
+    <h4 class="mt-md">After You Leave</h4>
+    <ul>
+      <li>☐ Factory reset your old devices (or get new ones)</li>
+      <li>☐ Remove yourself from Find My/Family Sharing</li>
+      <li>☐ Change passwords on ALL accounts</li>
+      <li>☐ Review account recovery options (phone numbers, backup emails)</li>
+      <li>☐ Enable two-factor authentication everywhere</li>
+      <li>☐ Review privacy settings on all social media</li>
+      <li>☐ Check for tracking devices in your car</li>
+      <li>☐ Be careful about photos showing your new location</li>
+    </ul>
+  </div>
+
+  <h2>For Everyone: Basic Digital Hygiene</h2>
+  
+  <p>Regardless of your situation, these practices help protect your privacy:</p>
+  
+  <div class="hygiene-tips">
+    <div class="hygiene-tip">
+      <h5>🔐 Strong, Unique Passwords</h5>
+      <p>Different password for each important account. Use a password manager if safe to do so.</p>
+    </div>
+    <div class="hygiene-tip">
+      <h5>🔑 Two-Factor Authentication</h5>
+      <p>Adds a second step to login. Use an authenticator app rather than SMS when possible.</p>
+    </div>
+    <div class="hygiene-tip">
+      <h5>📱 Keep Devices Updated</h5>
+      <p>Updates often fix security vulnerabilities that spyware exploits.</p>
+    </div>
+    <div class="hygiene-tip">
+      <h5>🔒 Lock Screen</h5>
+      <p>Use a PIN/password your partner can't guess. Don't use fingerprint if they might unlock while you sleep.</p>
+    </div>
+    <div class="hygiene-tip">
+      <h5>📍 Review Location Settings</h5>
+      <p>Know which apps can access your location and when. Turn off what you don't need.</p>
+    </div>
+    <div class="hygiene-tip">
+      <h5>☁️ Understand Cloud Backup</h5>
+      <p>Know what's backed up to the cloud and who has access to those accounts.</p>
+    </div>
+  </div>
+
+  <h2>Resources for Tech Safety</h2>
+  
+  <ul>
+    <li><strong>Safety Net at NNEDV:</strong> <a href="https://www.techsafety.org" target="_blank" rel="noopener">techsafety.org</a> — comprehensive tech safety resources</li>
+    <li><strong>National DV Hotline:</strong> 1-800-799-7233 — advocates can help with tech safety planning</li>
+    <li><strong>Clinic to End Tech Abuse:</strong> <a href="https://www.ceta.tech.cornell.edu" target="_blank" rel="noopener">Cornell University research on tech abuse</a></li>
+  </ul>
+
+  <Fragment slot="related">
+    <ul>
+      <li><a href="/tools/documentation">Documentation & Clarity</a></li>
+      <li><a href="/learn/patterns">Recognizing Harmful Patterns</a></li>
+      <li><a href="/get-help">Get Help & Resources</a></li>
+      <li><a href="/start-here">Take the Assessment</a></li>
+    </ul>
+  </Fragment>
+</ArticleLayout>
+
+<style>
+  .method-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: var(--space-md);
+    margin: var(--space-xl) 0;
+  }
+  
+  .method-card {
+    background: var(--color-bg-card);
+    border: 1px solid var(--color-border-light);
+    border-radius: var(--radius-lg);
+    padding: var(--space-lg);
+  }
+  
+  .method-card h4 {
+    margin: 0 0 var(--space-sm) 0;
+  }
+  
+  .method-card p {
+    margin: 0 0 var(--space-md) 0;
+    color: var(--color-text-light);
+  }
+  
+  .method-signs {
+    font-size: var(--text-sm);
+    padding-top: var(--space-sm);
+    border-top: 1px solid var(--color-border-light);
+    color: var(--color-text-muted);
+  }
+  
+  .checklist {
+    background: var(--color-bg-alt);
+    border-radius: var(--radius-lg);
+    padding: var(--space-xl);
+    list-style: none;
+    margin: var(--space-lg) 0;
+  }
+  
+  .checklist li {
+    position: relative;
+    padding-left: var(--space-lg);
+    margin-bottom: var(--space-sm);
+  }
+  
+  .checklist li::before {
+    content: "□";
+    position: absolute;
+    left: 0;
+    color: var(--color-primary);
+  }
+  
+  .check-section {
+    background: var(--color-bg-card);
+    border: 1px solid var(--color-border-light);
+    border-radius: var(--radius-lg);
+    padding: var(--space-xl);
+    margin: var(--space-xl) 0;
+  }
+  
+  .check-section h4 {
+    margin-top: 0;
+    color: var(--color-primary);
+  }
+  
+  .check-section ol {
+    margin-bottom: 0;
+  }
+  
+  .safety-steps {
+    background: linear-gradient(135deg, var(--color-primary), var(--color-primary-dark));
+    color: white;
+    border-radius: var(--radius-lg);
+    padding: var(--space-xl);
+    margin: var(--space-xl) 0;
+  }
+  
+  .safety-steps li {
+    margin-bottom: var(--space-md);
+  }
+  
+  .comm-options {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: var(--space-md);
+    margin: var(--space-xl) 0;
+  }
+  
+  .comm-option {
+    background: var(--color-bg-alt);
+    border-radius: var(--radius-md);
+    padding: var(--space-lg);
+  }
+  
+  .comm-option h5 {
+    margin: 0 0 var(--space-sm) 0;
+  }
+  
+  .comm-option p {
+    margin: 0;
+    font-size: var(--text-sm);
+    color: var(--color-text-light);
+  }
+  
+  .social-safety {
+    background: var(--color-bg-alt);
+    border-radius: var(--radius-lg);
+    padding: var(--space-xl);
+    margin: var(--space-xl) 0;
+  }
+  
+  .social-safety h4 {
+    margin-top: 0;
+    color: var(--color-primary);
+  }
+  
+  .social-safety ul {
+    margin-bottom: 0;
+  }
+  
+  .leaving-checklist {
+    background: var(--color-bg-card);
+    border: 2px solid var(--color-safety);
+    border-radius: var(--radius-lg);
+    padding: var(--space-xl);
+    margin: var(--space-xl) 0;
+  }
+  
+  .leaving-checklist h4 {
+    margin-top: 0;
+    color: var(--color-safety);
+  }
+  
+  .leaving-checklist ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .leaving-checklist li {
+    margin-bottom: var(--space-sm);
+    padding-left: var(--space-md);
+  }
+  
+  .hygiene-tips {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: var(--space-md);
+    margin: var(--space-xl) 0;
+  }
+  
+  .hygiene-tip {
+    background: var(--color-bg-card);
+    border: 1px solid var(--color-border-light);
+    border-radius: var(--radius-md);
+    padding: var(--space-lg);
+  }
+  
+  .hygiene-tip h5 {
+    margin: 0 0 var(--space-sm) 0;
+  }
+  
+  .hygiene-tip p {
+    margin: 0;
+    font-size: var(--text-sm);
+    color: var(--color-text-light);
+  }
+</style>

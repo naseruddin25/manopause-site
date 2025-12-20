@@ -1,0 +1,426 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout title="Clarity, Calm, and Boundaries">
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="container">
+      <div class="hero-content">
+        <h1 class="hero-title">Clarity, calm, and boundaries —<br><span class="hero-accent">without blame.</span></h1>
+        <p class="hero-desc">
+          Educational resources for understanding relationship conflict, recognizing harmful patterns, 
+          and finding your footing when things feel chaotic or unsafe.
+        </p>
+        <div class="hero-actions">
+          <a href="/start-here" class="btn btn-primary btn-lg">Start Here</a>
+          <a href="/get-help" class="btn btn-safety btn-lg">Get Help Now</a>
+        </div>
+      </div>
+      <div class="hero-visual">
+        <div class="hero-graphic">
+          <svg viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="200" cy="200" r="180" fill="none" stroke="var(--color-primary)" stroke-width="1" opacity="0.2"/>
+            <circle cx="200" cy="200" r="140" fill="none" stroke="var(--color-primary)" stroke-width="1" opacity="0.3"/>
+            <circle cx="200" cy="200" r="100" fill="none" stroke="var(--color-primary)" stroke-width="1" opacity="0.4"/>
+            <circle cx="200" cy="200" r="60" fill="var(--color-primary)" opacity="0.1"/>
+            <circle cx="200" cy="200" r="20" fill="var(--color-primary)" opacity="0.3"/>
+          </svg>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Entry Paths -->
+  <section class="entry-paths section">
+    <div class="container">
+      <h2 class="section-title text-center">Who are you here for?</h2>
+      <p class="section-desc text-center">Choose a path that fits your situation. Every resource is designed with safety, education, and respect in mind.</p>
+      
+      <div class="paths-grid">
+        <a href="/for-men" class="path-card path-men">
+          <div class="path-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="8" r="5"/>
+              <path d="M20 21a8 8 0 1 0-16 0"/>
+            </svg>
+          </div>
+          <h3>For Men</h3>
+          <p>Experiencing accusations, threats, surveillance, isolation, or emotional volatility? Start here.</p>
+          <span class="path-link">Begin guided triage →</span>
+        </a>
+        
+        <a href="/for-women" class="path-card path-women">
+          <div class="path-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="8" r="5"/>
+              <path d="M20 21a8 8 0 1 0-16 0"/>
+            </svg>
+          </div>
+          <h3>For Women</h3>
+          <p>Resources for recognizing patterns, understanding your options, and building safety.</p>
+          <span class="path-link">Explore resources →</span>
+        </a>
+        
+        <a href="/for-children" class="path-card path-children">
+          <div class="path-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M9 12h.01"/>
+              <path d="M15 12h.01"/>
+              <path d="M10 16c.5.3 1.2.5 2 .5s1.5-.2 2-.5"/>
+              <path d="M19 6.3a9 9 0 0 1 1.8 3.9 2 2 0 0 1 0 3.6 9 9 0 0 1-17.6 0 2 2 0 0 1 0-3.6A9 9 0 0 1 12 3c2 0 3.5 1.1 3.5 2.5s-.9 2.5-2 2.5c-.8 0-1.5-.4-1.5-1"/>
+            </svg>
+          </div>
+          <h3>Children & Teens</h3>
+          <p>Age-appropriate content for young people navigating adult conflict at home.</p>
+          <span class="path-link">Kid-friendly resources →</span>
+        </a>
+        
+        <a href="/for-families" class="path-card path-families">
+          <div class="path-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/>
+              <circle cx="9" cy="7" r="4"/>
+              <path d="M22 21v-2a4 4 0 0 0-3-3.87"/>
+              <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+            </svg>
+          </div>
+          <h3>Families & Supporters</h3>
+          <p>How to help a loved one safely — and what to avoid doing.</p>
+          <span class="path-link">Learn to support →</span>
+        </a>
+      </div>
+    </div>
+  </section>
+  
+  <!-- What You'll Find -->
+  <section class="features section-lg">
+    <div class="container">
+      <h2 class="section-title text-center">What you'll find here</h2>
+      
+      <div class="features-grid">
+        <div class="feature-card">
+          <div class="feature-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/>
+              <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/>
+            </svg>
+          </div>
+          <h3>Education, Not Diagnosis</h3>
+          <p>Learn about patterns, behaviors, and impacts — without labeling anyone as "crazy" or pathological.</p>
+        </div>
+        
+        <div class="feature-card">
+          <div class="feature-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+            </svg>
+          </div>
+          <h3>Safety First</h3>
+          <p>Every resource is designed with your physical and emotional safety as the top priority.</p>
+        </div>
+        
+        <div class="feature-card">
+          <div class="feature-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="10"/>
+              <path d="M12 6v6l4 2"/>
+            </svg>
+          </div>
+          <h3>Practical Tools</h3>
+          <p>Scripts, boundaries, de-escalation techniques, and documentation guidance you can use today.</p>
+        </div>
+        
+        <div class="feature-card">
+          <div class="feature-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+              <circle cx="9" cy="7" r="4"/>
+              <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
+              <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+            </svg>
+          </div>
+          <h3>For Everyone</h3>
+          <p>Resources for men, women, children, teens, and extended family members — culturally sensitive and respectful.</p>
+        </div>
+        
+        <div class="feature-card">
+          <div class="feature-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09z"/>
+              <path d="m12 15-3-3a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-6 11a22.35 22.35 0 0 1-4 2z"/>
+              <path d="M9 12H4s.55-3.03 2-4c1.62-1.08 5 0 5 0"/>
+              <path d="M12 15v5s3.03-.55 4-2c1.08-1.62 0-5 0-5"/>
+            </svg>
+          </div>
+          <h3>No Shame, No Blame</h3>
+          <p>Understanding why things happen doesn't mean excusing them. Responsibility without judgment.</p>
+        </div>
+        
+        <div class="feature-card">
+          <div class="feature-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M14 9V5a3 3 0 0 0-3-3l-4 9v11h11.28a2 2 0 0 0 2-1.7l1.38-9a2 2 0 0 0-2-2.3zM7 22H4a2 2 0 0 1-2-2v-7a2 2 0 0 1 2-2h3"/>
+            </svg>
+          </div>
+          <h3>Evidence-Informed</h3>
+          <p>Content grounded in current research from recognized domestic violence and trauma organizations.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Quick Start -->
+  <section class="quick-start section">
+    <div class="container container-content">
+      <div class="quick-start-box">
+        <h2>Not sure where to start?</h2>
+        <p>Our guided triage takes 2-3 minutes and helps you identify what's happening, assess intensity, and get a personalized 24-hour plan with specific scripts and boundaries.</p>
+        <a href="/start-here" class="btn btn-primary btn-lg">Take the Guided Assessment</a>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Disclaimer Section -->
+  <section class="disclaimer-section section">
+    <div class="container container-content">
+      <div class="disclaimer">
+        <p class="disclaimer-title">About This Resource</p>
+        <p>
+          manopause.info provides <strong>educational information only</strong>. We do not provide therapy, medical advice, 
+          legal counsel, or crisis intervention. Our content is designed to help you understand relationship dynamics, 
+          recognize harmful patterns, and make informed decisions about seeking professional help.
+        </p>
+        <p>
+          If you are in immediate danger, please call <strong>911</strong> or your local emergency services. 
+          For crisis support, contact the <a href="https://988lifeline.org">988 Suicide & Crisis Lifeline</a> 
+          or the <a href="https://www.thehotline.org">National Domestic Violence Hotline</a> at 1-800-799-7233.
+        </p>
+      </div>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  /* Hero Section */
+  .hero {
+    background: linear-gradient(135deg, var(--color-bg-alt) 0%, var(--color-bg) 100%);
+    padding: var(--space-4xl) 0;
+    overflow: hidden;
+  }
+  
+  .hero .container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-3xl);
+    align-items: center;
+  }
+  
+  .hero-title {
+    font-size: var(--text-4xl);
+    line-height: 1.1;
+    margin-bottom: var(--space-lg);
+  }
+  
+  .hero-accent {
+    color: var(--color-primary);
+  }
+  
+  .hero-desc {
+    font-size: var(--text-lg);
+    color: var(--color-text-light);
+    max-width: 500px;
+    margin-bottom: var(--space-xl);
+  }
+  
+  .hero-actions {
+    display: flex;
+    gap: var(--space-md);
+    flex-wrap: wrap;
+  }
+  
+  .hero-visual {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .hero-graphic {
+    width: 100%;
+    max-width: 400px;
+    animation: pulse 8s ease-in-out infinite;
+  }
+  
+  @keyframes pulse {
+    0%, 100% { transform: scale(1); opacity: 1; }
+    50% { transform: scale(1.02); opacity: 0.95; }
+  }
+  
+  /* Entry Paths */
+  .section-title {
+    font-size: var(--text-2xl);
+    margin-bottom: var(--space-md);
+  }
+  
+  .section-desc {
+    color: var(--color-text-light);
+    max-width: 600px;
+    margin: 0 auto var(--space-2xl);
+  }
+  
+  .paths-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: var(--space-lg);
+  }
+  
+  .path-card {
+    background-color: var(--color-bg-card);
+    border: 2px solid var(--color-border-light);
+    border-radius: var(--radius-lg);
+    padding: var(--space-xl);
+    text-decoration: none;
+    transition: all var(--transition-base);
+  }
+  
+  .path-card:hover {
+    border-color: var(--color-primary);
+    box-shadow: var(--shadow-lg);
+    transform: translateY(-4px);
+  }
+  
+  .path-icon {
+    width: 56px;
+    height: 56px;
+    background-color: var(--color-bg-alt);
+    border-radius: var(--radius-lg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: var(--space-md);
+    color: var(--color-primary);
+  }
+  
+  .path-card h3 {
+    font-size: var(--text-xl);
+    color: var(--color-text);
+    margin-bottom: var(--space-sm);
+  }
+  
+  .path-card p {
+    color: var(--color-text-light);
+    font-size: var(--text-sm);
+    margin-bottom: var(--space-md);
+  }
+  
+  .path-link {
+    font-size: var(--text-sm);
+    font-weight: 500;
+    color: var(--color-primary);
+  }
+  
+  /* Features */
+  .features {
+    background-color: var(--color-bg-alt);
+  }
+  
+  .features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: var(--space-xl);
+    margin-top: var(--space-2xl);
+  }
+  
+  .feature-card {
+    text-align: center;
+    padding: var(--space-lg);
+  }
+  
+  .feature-icon {
+    width: 48px;
+    height: 48px;
+    background-color: var(--color-primary);
+    color: white;
+    border-radius: var(--radius-lg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto var(--space-md);
+  }
+  
+  .feature-card h3 {
+    font-size: var(--text-lg);
+    margin-bottom: var(--space-sm);
+  }
+  
+  .feature-card p {
+    color: var(--color-text-light);
+    font-size: var(--text-sm);
+  }
+  
+  /* Quick Start */
+  .quick-start-box {
+    background: linear-gradient(135deg, var(--color-primary-dark) 0%, var(--color-primary) 100%);
+    color: white;
+    padding: var(--space-3xl);
+    border-radius: var(--radius-xl);
+    text-align: center;
+  }
+  
+  .quick-start-box h2 {
+    color: white;
+    margin-bottom: var(--space-md);
+  }
+  
+  .quick-start-box p {
+    opacity: 0.9;
+    max-width: 500px;
+    margin: 0 auto var(--space-xl);
+  }
+  
+  .quick-start-box .btn {
+    background-color: white;
+    color: var(--color-primary-dark);
+  }
+  
+  .quick-start-box .btn:hover {
+    background-color: var(--color-bg);
+  }
+  
+  /* Disclaimer Section */
+  .disclaimer-section {
+    background-color: var(--color-bg);
+  }
+  
+  /* Responsive */
+  @media (max-width: 768px) {
+    .hero .container {
+      grid-template-columns: 1fr;
+    }
+    
+    .hero-visual {
+      order: -1;
+    }
+    
+    .hero-graphic {
+      max-width: 250px;
+    }
+    
+    .hero-title {
+      font-size: var(--text-3xl);
+    }
+    
+    .hero-actions {
+      flex-direction: column;
+    }
+    
+    .hero-actions .btn {
+      width: 100%;
+      text-align: center;
+    }
+    
+    .quick-start-box {
+      padding: var(--space-2xl);
+    }
+  }
+</style>

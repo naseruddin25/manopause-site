@@ -1,0 +1,620 @@
+---
+export interface Props {
+  title: string;
+  description?: string;
+  image?: string;
+  noindex?: boolean;
+}
+
+const { 
+  title, 
+  description = "Educational resources for understanding relationship conflict, recognizing harmful patterns, and finding clarity with boundaries — without blame.", 
+  image = "/og-image.png",
+  noindex = false 
+} = Astro.props;
+
+const siteTitle = title ? `${title} | manopause.info` : "manopause.info | Clarity, Calm, and Boundaries";
+const canonicalURL = new URL(Astro.url.pathname, Astro.site);
+---
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  
+  <title>{siteTitle}</title>
+  <meta name="description" content={description}>
+  
+  {noindex && <meta name="robots" content="noindex, nofollow">}
+  
+  <link rel="canonical" href={canonicalURL}>
+  
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content={canonicalURL}>
+  <meta property="og:title" content={siteTitle}>
+  <meta property="og:description" content={description}>
+  <meta property="og:image" content={new URL(image, Astro.site)}>
+  
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:url" content={canonicalURL}>
+  <meta name="twitter:title" content={siteTitle}>
+  <meta name="twitter:description" content={description}>
+  <meta name="twitter:image" content={new URL(image, Astro.site)}>
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Source+Serif+4:opsz,wght@8..60,400;8..60,500;8..60,600;8..60,700&display=swap" rel="stylesheet">
+  
+  <!-- Schema.org JSON-LD -->
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "manopause.info",
+      "description": "Educational resources for understanding relationship conflict, recognizing harmful patterns, and building boundaries with calm and clarity.",
+      "url": "https://manopause.info",
+      "publisher": {
+        "@type": "Organization",
+        "name": "manopause.info",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://manopause.info/logo.png"
+        }
+      },
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": "https://manopause.info/search?q={search_term_string}",
+        "query-input": "required name=search_term_string"
+      }
+    }
+  </script>
+  
+  <!-- Global Styles -->
+  <style is:global>
+    @import '../styles/global.css';
+  </style>
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+  
+  <!-- Safety Banner -->
+  <div class="safety-banner no-print">
+    <div class="container">
+      <p>
+        <strong>Your safety matters.</strong> 
+        If you are in immediate danger, call <strong>911</strong> or your local emergency services.
+        <a href="/get-help">View all help resources →</a>
+      </p>
+    </div>
+  </div>
+  
+  <!-- Header -->
+  <header class="site-header">
+    <div class="container">
+      <nav class="main-nav" aria-label="Main navigation">
+        <a href="/" class="logo">
+          <span class="logo-text">manopause<span class="logo-dot">.info</span></span>
+        </a>
+        
+        <button class="mobile-menu-toggle" aria-expanded="false" aria-controls="main-menu" aria-label="Toggle menu">
+          <span class="hamburger"></span>
+        </button>
+        
+        <ul id="main-menu" class="nav-menu">
+          <li><a href="/start-here">Start Here</a></li>
+          <li class="has-dropdown">
+            <a href="/learn" aria-expanded="false">Learn</a>
+            <ul class="dropdown-menu">
+              <li><a href="/learn/what-is-abuse">What Is Abuse?</a></li>
+              <li><a href="/learn/trauma-responses">Trauma & Stress</a></li>
+              <li><a href="/learn/patterns">Patterns Library</a></li>
+              <li><a href="/learn/hormones">Hormones & Behavior</a></li>
+            </ul>
+          </li>
+          <li class="has-dropdown">
+            <a href="/tools" aria-expanded="false">Tools</a>
+            <ul class="dropdown-menu">
+              <li><a href="/tools/de-escalation">De-escalation</a></li>
+              <li><a href="/tools/boundaries">Boundaries</a></li>
+              <li><a href="/tools/documentation">Documentation</a></li>
+              <li><a href="/tools/digital-safety">Digital Safety</a></li>
+            </ul>
+          </li>
+          <li class="has-dropdown">
+            <a href="/for-you" aria-expanded="false">For You</a>
+            <ul class="dropdown-menu">
+              <li><a href="/for-men">For Men</a></li>
+              <li><a href="/for-women">For Women</a></li>
+              <li><a href="/for-children">Children & Teens</a></li>
+              <li><a href="/for-families">Families & Supporters</a></li>
+            </ul>
+          </li>
+          <li><a href="/about">About</a></li>
+        </ul>
+        
+        <a href="/get-help" class="btn btn-safety btn-sm nav-cta">Get Help Now</a>
+      </nav>
+    </div>
+  </header>
+  
+  <!-- Main Content -->
+  <main id="main-content">
+    <slot />
+  </main>
+  
+  <!-- Footer Disclaimer -->
+  <div class="footer-disclaimer">
+    <div class="container container-content">
+      <div class="disclaimer">
+        <p class="disclaimer-title">Important Disclaimer</p>
+        <p>
+          The information on this website is for <strong>educational purposes only</strong>. 
+          It is not intended as therapy, medical advice, legal advice, or a substitute for professional treatment. 
+          If you are experiencing a mental health crisis or are in immediate danger, please contact emergency services (911) 
+          or the <a href="https://988lifeline.org">988 Suicide & Crisis Lifeline</a>.
+        </p>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="/" class="logo">
+            <span class="logo-text">manopause<span class="logo-dot">.info</span></span>
+          </a>
+          <p class="footer-tagline">Clarity, calm, and boundaries — without blame.</p>
+          <p class="footer-mission">Educational resources for understanding relationship conflict and building healthier patterns.</p>
+        </div>
+        
+        <div class="footer-links">
+          <h4>Learn</h4>
+          <ul>
+            <li><a href="/learn/what-is-abuse">What Is Abuse?</a></li>
+            <li><a href="/learn/trauma-responses">Trauma & Stress</a></li>
+            <li><a href="/learn/patterns">Patterns Library</a></li>
+            <li><a href="/learn/hormones">Hormones & Behavior</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-links">
+          <h4>Tools</h4>
+          <ul>
+            <li><a href="/tools/de-escalation">De-escalation</a></li>
+            <li><a href="/tools/boundaries">Boundaries</a></li>
+            <li><a href="/tools/documentation">Documentation</a></li>
+            <li><a href="/tools/digital-safety">Digital Safety</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-links">
+          <h4>For You</h4>
+          <ul>
+            <li><a href="/for-men">For Men</a></li>
+            <li><a href="/for-women">For Women</a></li>
+            <li><a href="/for-children">Children & Teens</a></li>
+            <li><a href="/for-families">Families & Supporters</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-links">
+          <h4>About</h4>
+          <ul>
+            <li><a href="/about">Our Mission</a></li>
+            <li><a href="/about/ethics">Ethics & Transparency</a></li>
+            <li><a href="/about/funding">How We're Funded</a></li>
+            <li><a href="/references">References</a></li>
+          </ul>
+        </div>
+      </div>
+      
+      <div class="footer-bottom">
+        <p>&copy; {new Date().getFullYear()} manopause.info. All rights reserved.</p>
+        <p class="footer-legal">
+          <a href="/privacy">Privacy Policy</a> · 
+          <a href="/terms">Terms of Use</a> · 
+          <a href="/accessibility">Accessibility</a>
+        </p>
+      </div>
+    </div>
+  </footer>
+  
+  <!-- Get Help Now Sticky Button (Mobile) -->
+  <div class="sticky-help-btn no-print">
+    <a href="/get-help" class="btn btn-safety">
+      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+      </svg>
+      Get Help
+    </a>
+  </div>
+  
+  <!-- Mobile Menu Script -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const menuToggle = document.querySelector('.mobile-menu-toggle');
+      const mainMenu = document.querySelector('#main-menu');
+      
+      if (menuToggle && mainMenu) {
+        menuToggle.addEventListener('click', () => {
+          const isExpanded = menuToggle.getAttribute('aria-expanded') === 'true';
+          menuToggle.setAttribute('aria-expanded', !isExpanded);
+          mainMenu.classList.toggle('is-active');
+        });
+      }
+      
+      // Dropdown handling for desktop
+      const dropdownToggles = document.querySelectorAll('.has-dropdown > a');
+      dropdownToggles.forEach(toggle => {
+        toggle.addEventListener('click', (e) => {
+          if (window.innerWidth < 768) {
+            e.preventDefault();
+            const parent = toggle.parentElement;
+            parent.classList.toggle('is-open');
+          }
+        });
+      });
+      
+      // Copy button functionality
+      document.querySelectorAll('.copy-btn').forEach(btn => {
+        btn.addEventListener('click', async () => {
+          const content = btn.closest('.script-block').querySelector('.script-block-content').textContent;
+          try {
+            await navigator.clipboard.writeText(content.trim());
+            btn.textContent = 'Copied!';
+            setTimeout(() => btn.textContent = 'Copy', 2000);
+          } catch (err) {
+            btn.textContent = 'Failed';
+          }
+        });
+      });
+    });
+  </script>
+</body>
+</html>
+
+<style>
+  /* Safety Banner */
+  .safety-banner {
+    background-color: var(--color-safety-light);
+    border-bottom: 1px solid var(--color-safety);
+    padding: var(--space-sm) 0;
+    font-size: var(--text-sm);
+    text-align: center;
+  }
+  
+  .safety-banner p {
+    margin: 0;
+  }
+  
+  .safety-banner a {
+    color: var(--color-safety);
+    font-weight: 500;
+  }
+  
+  /* Header */
+  .site-header {
+    background-color: var(--color-bg-card);
+    border-bottom: 1px solid var(--color-border-light);
+    padding: var(--space-md) 0;
+    position: sticky;
+    top: 0;
+    z-index: 50;
+  }
+  
+  .main-nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--space-lg);
+  }
+  
+  .logo {
+    text-decoration: none;
+  }
+  
+  .logo-text {
+    font-family: var(--font-primary);
+    font-size: var(--text-xl);
+    font-weight: 600;
+    color: var(--color-text);
+  }
+  
+  .logo-dot {
+    color: var(--color-primary);
+  }
+  
+  .nav-menu {
+    display: flex;
+    align-items: center;
+    gap: var(--space-lg);
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .nav-menu a {
+    color: var(--color-text);
+    text-decoration: none;
+    font-weight: 500;
+    font-size: var(--text-sm);
+    transition: color var(--transition-fast);
+  }
+  
+  .nav-menu a:hover {
+    color: var(--color-primary);
+  }
+  
+  .nav-cta {
+    margin-left: var(--space-md);
+  }
+  
+  /* Dropdown Menu */
+  .has-dropdown {
+    position: relative;
+  }
+  
+  .dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: var(--color-bg-card);
+    border: 1px solid var(--color-border-light);
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-lg);
+    padding: var(--space-sm);
+    min-width: 200px;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(10px);
+    transition: all var(--transition-fast);
+    list-style: none;
+  }
+  
+  .has-dropdown:hover .dropdown-menu,
+  .has-dropdown.is-open .dropdown-menu {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+  }
+  
+  .dropdown-menu li {
+    margin: 0;
+  }
+  
+  .dropdown-menu a {
+    display: block;
+    padding: var(--space-sm) var(--space-md);
+    border-radius: var(--radius-sm);
+  }
+  
+  .dropdown-menu a:hover {
+    background-color: var(--color-bg-alt);
+  }
+  
+  /* Mobile Menu Toggle */
+  .mobile-menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: var(--space-sm);
+  }
+  
+  .hamburger {
+    display: block;
+    width: 24px;
+    height: 2px;
+    background-color: var(--color-text);
+    position: relative;
+  }
+  
+  .hamburger::before,
+  .hamburger::after {
+    content: '';
+    position: absolute;
+    width: 24px;
+    height: 2px;
+    background-color: var(--color-text);
+    left: 0;
+  }
+  
+  .hamburger::before { top: -8px; }
+  .hamburger::after { bottom: -8px; }
+  
+  /* Footer */
+  .footer-disclaimer {
+    background-color: var(--color-bg-alt);
+    padding: var(--space-xl) 0;
+    border-top: 1px solid var(--color-border-light);
+  }
+  
+  .site-footer {
+    background-color: var(--color-bg-card);
+    border-top: 1px solid var(--color-border-light);
+    padding: var(--space-3xl) 0 var(--space-xl);
+  }
+  
+  .footer-grid {
+    display: grid;
+    grid-template-columns: 2fr repeat(4, 1fr);
+    gap: var(--space-2xl);
+    margin-bottom: var(--space-2xl);
+  }
+  
+  .footer-brand {
+    max-width: 280px;
+  }
+  
+  .footer-tagline {
+    font-family: var(--font-primary);
+    font-size: var(--text-lg);
+    color: var(--color-text-light);
+    margin-top: var(--space-md);
+    margin-bottom: var(--space-sm);
+  }
+  
+  .footer-mission {
+    font-size: var(--text-sm);
+    color: var(--color-text-muted);
+  }
+  
+  .footer-links h4 {
+    font-size: var(--text-sm);
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-bottom: var(--space-md);
+    color: var(--color-text);
+  }
+  
+  .footer-links ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .footer-links li {
+    margin-bottom: var(--space-sm);
+  }
+  
+  .footer-links a {
+    color: var(--color-text-light);
+    text-decoration: none;
+    font-size: var(--text-sm);
+    transition: color var(--transition-fast);
+  }
+  
+  .footer-links a:hover {
+    color: var(--color-primary);
+  }
+  
+  .footer-bottom {
+    border-top: 1px solid var(--color-border-light);
+    padding-top: var(--space-xl);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: var(--text-sm);
+    color: var(--color-text-muted);
+  }
+  
+  .footer-legal a {
+    color: var(--color-text-muted);
+    text-decoration: none;
+  }
+  
+  .footer-legal a:hover {
+    color: var(--color-primary);
+  }
+  
+  /* Sticky Help Button */
+  .sticky-help-btn {
+    position: fixed;
+    bottom: var(--space-lg);
+    right: var(--space-lg);
+    z-index: 40;
+  }
+  
+  .sticky-help-btn .btn {
+    box-shadow: var(--shadow-xl);
+    display: flex;
+    align-items: center;
+    gap: var(--space-sm);
+  }
+  
+  /* Mobile Styles */
+  @media (max-width: 768px) {
+    .mobile-menu-toggle {
+      display: block;
+    }
+    
+    .nav-menu {
+      position: absolute;
+      top: 100%;
+      left: 0;
+      right: 0;
+      background-color: var(--color-bg-card);
+      border-bottom: 1px solid var(--color-border);
+      flex-direction: column;
+      padding: var(--space-lg);
+      gap: var(--space-sm);
+      display: none;
+    }
+    
+    .nav-menu.is-active {
+      display: flex;
+    }
+    
+    .nav-menu li {
+      width: 100%;
+    }
+    
+    .nav-menu a {
+      display: block;
+      padding: var(--space-sm) 0;
+    }
+    
+    .nav-cta {
+      margin-left: 0;
+      margin-top: var(--space-md);
+      width: 100%;
+      text-align: center;
+    }
+    
+    .dropdown-menu {
+      position: static;
+      opacity: 1;
+      visibility: visible;
+      transform: none;
+      box-shadow: none;
+      border: none;
+      background: none;
+      padding-left: var(--space-md);
+      display: none;
+    }
+    
+    .has-dropdown.is-open .dropdown-menu {
+      display: block;
+    }
+    
+    .footer-grid {
+      grid-template-columns: 1fr 1fr;
+    }
+    
+    .footer-brand {
+      grid-column: 1 / -1;
+      max-width: none;
+    }
+    
+    .footer-bottom {
+      flex-direction: column;
+      gap: var(--space-sm);
+      text-align: center;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .footer-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+  
+  /* Hide sticky button on desktop */
+  @media (min-width: 769px) {
+    .sticky-help-btn {
+      display: none;
+    }
+  }
+</style>

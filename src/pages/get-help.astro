@@ -1,0 +1,383 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import SafetyCallout from '../components/SafetyCallout.astro';
+---
+
+<BaseLayout title="Get Help Now" description="Emergency resources, hotlines, and support services for those experiencing domestic abuse or relationship crisis.">
+  <section class="help-hero">
+    <div class="container container-content">
+      <h1>Get Help Now</h1>
+      <p class="lead">You don't have to figure this out alone. Support is available 24/7, and reaching out is a sign of strength.</p>
+    </div>
+  </section>
+  
+  <section class="emergency-section section">
+    <div class="container container-content">
+      <SafetyCallout type="safety" title="If You're in Immediate Danger">
+        <p><strong>Call 911</strong> or your local emergency services immediately. If you can't speak, many 911 centers accept text messages — check your local availability.</p>
+      </SafetyCallout>
+      
+      <h2>Crisis Hotlines</h2>
+      <p>These lines are staffed by trained advocates who can help you assess your safety, create a plan, and find local resources. All calls are confidential.</p>
+      
+      <div class="hotlines-grid">
+        <div class="hotline-card primary">
+          <h3>National Domestic Violence Hotline</h3>
+          <p class="hotline-number">1-800-799-7233</p>
+          <p class="hotline-alt">TTY: 1-800-787-3224</p>
+          <p>Available 24/7, 365 days a year. Advocates speak 200+ languages.</p>
+          <div class="hotline-actions">
+            <a href="tel:1-800-799-7233" class="btn btn-safety">Call Now</a>
+            <a href="https://www.thehotline.org/get-help/" class="btn btn-secondary" target="_blank" rel="noopener">Online Chat</a>
+          </div>
+        </div>
+        
+        <div class="hotline-card">
+          <h3>Crisis Text Line</h3>
+          <p class="hotline-number">Text HOME to 741741</p>
+          <p>Free, 24/7 crisis support via text message. Good if you can't speak out loud.</p>
+          <div class="hotline-actions">
+            <a href="sms:741741&body=HOME" class="btn btn-primary">Text Now</a>
+          </div>
+        </div>
+        
+        <div class="hotline-card">
+          <h3>988 Suicide & Crisis Lifeline</h3>
+          <p class="hotline-number">Call or Text 988</p>
+          <p>24/7 support for anyone in emotional distress or mental health crisis.</p>
+          <div class="hotline-actions">
+            <a href="tel:988" class="btn btn-primary">Call 988</a>
+          </div>
+        </div>
+        
+        <div class="hotline-card">
+          <h3>National Child Abuse Hotline</h3>
+          <p class="hotline-number">1-800-422-4453</p>
+          <p>24/7 support for anyone concerned about a child's safety. Interpretation available.</p>
+          <div class="hotline-actions">
+            <a href="tel:1-800-422-4453" class="btn btn-primary">Call Now</a>
+          </div>
+        </div>
+        
+        <div class="hotline-card">
+          <h3>National Sexual Assault Hotline</h3>
+          <p class="hotline-number">1-800-656-4673</p>
+          <p>RAINN's 24/7 hotline for survivors of sexual violence.</p>
+          <div class="hotline-actions">
+            <a href="tel:1-800-656-4673" class="btn btn-primary">Call Now</a>
+            <a href="https://rainn.org/get-help" class="btn btn-secondary" target="_blank" rel="noopener">Online Chat</a>
+          </div>
+        </div>
+        
+        <div class="hotline-card">
+          <h3>StrongHearts Native Helpline</h3>
+          <p class="hotline-number">1-844-762-8483</p>
+          <p>24/7 culturally-appropriate support for Native Americans and Alaska Natives.</p>
+          <div class="hotline-actions">
+            <a href="tel:1-844-762-8483" class="btn btn-primary">Call Now</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <section class="resources-section section">
+    <div class="container container-content">
+      <h2>Finding Local Help</h2>
+      <p>Local organizations can provide shelter, legal advocacy, counseling, and other services specific to your area.</p>
+      
+      <div class="resource-cards">
+        <div class="resource-card">
+          <h3>Find a Local Shelter</h3>
+          <p>Search for domestic violence shelters and programs near you.</p>
+          <a href="https://www.domesticshelters.org/help" class="btn btn-secondary" target="_blank" rel="noopener">DomesticShelters.org →</a>
+        </div>
+        
+        <div class="resource-card">
+          <h3>Find a Therapist</h3>
+          <p>Search for trauma-informed therapists in your area.</p>
+          <a href="https://www.psychologytoday.com/us/therapists/trauma-and-ptsd" class="btn btn-secondary" target="_blank" rel="noopener">Psychology Today →</a>
+        </div>
+        
+        <div class="resource-card">
+          <h3>Legal Aid</h3>
+          <p>Find free or low-cost legal assistance for family law, protective orders, and more.</p>
+          <a href="https://www.lawhelp.org/" class="btn btn-secondary" target="_blank" rel="noopener">LawHelp.org →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <section class="men-section section">
+    <div class="container container-content">
+      <h2>Resources for Men</h2>
+      <p>Men experience domestic abuse too, and deserve support without judgment. These resources understand the unique challenges men face.</p>
+      
+      <div class="resource-cards">
+        <div class="resource-card">
+          <h3>National Domestic Violence Hotline</h3>
+          <p>Advocates are trained to support victims of all genders. Your call will be treated with respect.</p>
+          <p class="hotline-number">1-800-799-7233</p>
+        </div>
+        
+        <div class="resource-card">
+          <h3>ManKind Initiative (UK)</h3>
+          <p>Charity offering support for male victims of domestic abuse.</p>
+          <a href="https://mankind.org.uk/" class="btn btn-secondary" target="_blank" rel="noopener">Visit Site →</a>
+        </div>
+        
+        <div class="resource-card">
+          <h3>1in6</h3>
+          <p>Support for men who have experienced sexual abuse or assault.</p>
+          <a href="https://1in6.org/" class="btn btn-secondary" target="_blank" rel="noopener">Visit Site →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <section class="cultural-section section">
+    <div class="container container-content">
+      <h2>Cultural & Community-Specific Resources</h2>
+      <p>Culturally sensitive support that respects your background, faith, and community.</p>
+      
+      <div class="resource-cards">
+        <div class="resource-card">
+          <h3>Asian Pacific Institute on Gender-Based Violence</h3>
+          <p>Resources and referrals for Asian and Pacific Islander communities.</p>
+          <a href="https://www.api-gbv.org/" class="btn btn-secondary" target="_blank" rel="noopener">Visit Site →</a>
+        </div>
+        
+        <div class="resource-card">
+          <h3>Casa de Esperanza</h3>
+          <p>National hotline and resources for Latinx communities.</p>
+          <p class="hotline-number">1-651-772-1611</p>
+        </div>
+        
+        <div class="resource-card">
+          <h3>The Network / La Red</h3>
+          <p>Support for LGBTQ+ survivors of partner abuse.</p>
+          <p class="hotline-number">617-742-4911</p>
+        </div>
+        
+        <div class="resource-card">
+          <h3>National Indigenous Women's Resource Center</h3>
+          <p>Resources for Native American and Alaska Native women.</p>
+          <a href="https://www.niwrc.org/" class="btn btn-secondary" target="_blank" rel="noopener">Visit Site →</a>
+        </div>
+        
+        <div class="resource-card">
+          <h3>Unchained At Last</h3>
+          <p>Support for survivors of forced and child marriage.</p>
+          <a href="https://www.unchainedatlast.org/" class="btn btn-secondary" target="_blank" rel="noopener">Visit Site →</a>
+        </div>
+        
+        <div class="resource-card">
+          <h3>Faith-Based Resources</h3>
+          <p>Many faith communities have domestic violence ministries. Contact your local religious leader or search for faith-based DV organizations in your tradition.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <section class="safety-planning section">
+    <div class="container container-content">
+      <h2>Safety Planning</h2>
+      <p>A safety plan is a personalized, practical plan to stay safe while in an abusive relationship, when planning to leave, or after leaving.</p>
+      
+      <div class="safety-steps">
+        <div class="safety-step">
+          <h3>1. Identify Safe People</h3>
+          <p>Who can you call in an emergency? Where can you go if you need to leave quickly? Have at least one person who knows your situation.</p>
+        </div>
+        
+        <div class="safety-step">
+          <h3>2. Prepare Essential Items</h3>
+          <p>Keep copies of important documents (ID, birth certificates, medications, financial info) somewhere safe — with a trusted friend or in a secure location.</p>
+        </div>
+        
+        <div class="safety-step">
+          <h3>3. Know Your Exits</h3>
+          <p>Be aware of all exits in your home. If violence begins, try to move toward an exit, not toward a bathroom or kitchen (where weapons may be accessible).</p>
+        </div>
+        
+        <div class="safety-step">
+          <h3>4. Create a Code Word</h3>
+          <p>Establish a code word with a trusted person that signals you need help. This can be used in phone calls or texts when you can't speak freely.</p>
+        </div>
+        
+        <div class="safety-step">
+          <h3>5. Protect Your Digital Safety</h3>
+          <p>Be aware that your phone, email, and devices may be monitored. Consider using a public computer or phone for sensitive searches and communications.</p>
+          <a href="/tools/digital-safety" class="btn btn-secondary btn-sm">Digital Safety Guide →</a>
+        </div>
+      </div>
+      
+      <div class="safety-resources mt-xl">
+        <a href="https://www.thehotline.org/plan-for-safety/" class="btn btn-primary" target="_blank" rel="noopener">Create a Safety Plan with The Hotline</a>
+      </div>
+    </div>
+  </section>
+  
+  <section class="disclaimer-section section">
+    <div class="container container-content">
+      <div class="disclaimer">
+        <p class="disclaimer-title">Important Note</p>
+        <p>
+          The resources listed here are provided for informational purposes. We cannot guarantee the availability or quality of external services. 
+          Always trust your instincts about what feels safest for your specific situation. If you're unsure about a resource, 
+          the National Domestic Violence Hotline can help you evaluate your options.
+        </p>
+      </div>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .help-hero {
+    background: linear-gradient(135deg, var(--color-safety-light) 0%, var(--color-bg) 100%);
+    padding: var(--space-3xl) 0;
+    border-bottom: 1px solid var(--color-border-light);
+  }
+  
+  .help-hero h1 {
+    margin-bottom: var(--space-md);
+  }
+  
+  .lead {
+    font-size: var(--text-lg);
+    color: var(--color-text-light);
+    max-width: 600px;
+  }
+  
+  .emergency-section h2 {
+    margin-top: var(--space-2xl);
+  }
+  
+  .hotlines-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: var(--space-lg);
+    margin-top: var(--space-xl);
+  }
+  
+  .hotline-card {
+    background-color: var(--color-bg-card);
+    border: 1px solid var(--color-border-light);
+    border-radius: var(--radius-lg);
+    padding: var(--space-xl);
+  }
+  
+  .hotline-card.primary {
+    border-color: var(--color-safety);
+    border-width: 2px;
+    background-color: var(--color-safety-light);
+  }
+  
+  .hotline-card h3 {
+    font-size: var(--text-lg);
+    margin-bottom: var(--space-sm);
+  }
+  
+  .hotline-number {
+    font-size: var(--text-2xl);
+    font-weight: 700;
+    color: var(--color-primary);
+    margin-bottom: var(--space-xs);
+  }
+  
+  .hotline-alt {
+    font-size: var(--text-sm);
+    color: var(--color-text-muted);
+    margin-bottom: var(--space-md);
+  }
+  
+  .hotline-card p {
+    font-size: var(--text-sm);
+    color: var(--color-text-light);
+    margin-bottom: var(--space-md);
+  }
+  
+  .hotline-actions {
+    display: flex;
+    gap: var(--space-sm);
+    flex-wrap: wrap;
+  }
+  
+  .resource-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: var(--space-lg);
+    margin-top: var(--space-xl);
+  }
+  
+  .resource-card {
+    background-color: var(--color-bg-card);
+    border: 1px solid var(--color-border-light);
+    border-radius: var(--radius-lg);
+    padding: var(--space-xl);
+  }
+  
+  .resource-card h3 {
+    font-size: var(--text-lg);
+    margin-bottom: var(--space-sm);
+  }
+  
+  .resource-card p {
+    font-size: var(--text-sm);
+    color: var(--color-text-light);
+    margin-bottom: var(--space-md);
+  }
+  
+  .resource-card .hotline-number {
+    font-size: var(--text-xl);
+    margin-bottom: 0;
+  }
+  
+  .men-section {
+    background-color: var(--color-bg-alt);
+  }
+  
+  .safety-steps {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-lg);
+    margin-top: var(--space-xl);
+  }
+  
+  .safety-step {
+    background-color: var(--color-bg-card);
+    border: 1px solid var(--color-border-light);
+    border-radius: var(--radius-md);
+    padding: var(--space-lg);
+  }
+  
+  .safety-step h3 {
+    font-size: var(--text-base);
+    margin-bottom: var(--space-sm);
+  }
+  
+  .safety-step p {
+    font-size: var(--text-sm);
+    color: var(--color-text-light);
+    margin-bottom: var(--space-sm);
+  }
+  
+  .safety-step p:last-child {
+    margin-bottom: 0;
+  }
+  
+  .safety-resources {
+    text-align: center;
+  }
+  
+  @media (max-width: 640px) {
+    .hotline-actions {
+      flex-direction: column;
+    }
+    
+    .hotline-actions .btn {
+      width: 100%;
+      text-align: center;
+    }
+  }
+</style>

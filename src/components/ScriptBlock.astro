@@ -1,0 +1,86 @@
+---
+export interface Props {
+  label?: string;
+  context?: string;
+}
+
+const { label = "Example Script", context } = Astro.props;
+---
+
+<div class="script-block">
+  <div class="script-block-header">
+    <span class="script-block-title">{label}</span>
+    <button class="copy-btn" type="button">Copy</button>
+  </div>
+  {context && <p class="script-context">{context}</p>}
+  <div class="script-block-content">
+    <slot />
+  </div>
+</div>
+
+<style>
+  .script-block {
+    background-color: var(--color-bg-alt);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-lg);
+    padding: var(--space-lg);
+    margin: var(--space-xl) 0;
+    position: relative;
+  }
+  
+  .script-block-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: var(--space-md);
+    padding-bottom: var(--space-md);
+    border-bottom: 1px solid var(--color-border-light);
+  }
+  
+  .script-block-title {
+    font-size: var(--text-sm);
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--color-text-muted);
+  }
+  
+  .script-context {
+    font-size: var(--text-sm);
+    color: var(--color-text-light);
+    font-style: italic;
+    margin-bottom: var(--space-md);
+  }
+  
+  .script-block-content {
+    font-family: var(--font-primary);
+    font-size: var(--text-lg);
+    line-height: 1.6;
+    color: var(--color-text);
+  }
+  
+  .script-block-content :global(p) {
+    margin-bottom: var(--space-sm);
+  }
+  
+  .script-block-content :global(p:last-child) {
+    margin-bottom: 0;
+  }
+  
+  .copy-btn {
+    background-color: var(--color-bg-card);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-sm);
+    padding: var(--space-xs) var(--space-sm);
+    font-size: var(--text-xs);
+    cursor: pointer;
+    transition: all var(--transition-fast);
+    font-family: var(--font-secondary);
+  }
+  
+  .copy-btn:hover {
+    background-color: var(--color-primary);
+    color: white;
+    border-color: var(--color-primary);
+  }
+</style>

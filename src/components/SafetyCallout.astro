@@ -1,0 +1,87 @@
+---
+export interface Props {
+  title?: string;
+  type?: 'safety' | 'info' | 'warning';
+}
+
+const { title = "Important", type = "safety" } = Astro.props;
+
+const typeClasses = {
+  safety: 'callout-safety',
+  info: 'callout-info',
+  warning: 'callout-warning'
+};
+
+const typeIcons = {
+  safety: `<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>`,
+  info: `<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="16" x2="12" y2="12"></line><line x1="12" y1="8" x2="12.01" y2="8"></line></svg>`,
+  warning: `<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"></path><line x1="12" y1="9" x2="12" y2="13"></line><line x1="12" y1="17" x2="12.01" y2="17"></line></svg>`
+};
+---
+
+<div class={`callout ${typeClasses[type]}`}>
+  <div class="callout-header">
+    <Fragment set:html={typeIcons[type]} />
+    <span class="callout-title">{title}</span>
+  </div>
+  <div class="callout-content">
+    <slot />
+  </div>
+</div>
+
+<style>
+  .callout {
+    border-radius: var(--radius-md);
+    padding: var(--space-lg);
+    margin: var(--space-xl) 0;
+    border-left: 4px solid;
+  }
+  
+  .callout-safety {
+    background-color: var(--color-safety-light);
+    border-color: var(--color-safety);
+  }
+  
+  .callout-safety .callout-header {
+    color: var(--color-safety);
+  }
+  
+  .callout-info {
+    background-color: #E8F0F5;
+    border-color: var(--color-info);
+  }
+  
+  .callout-info .callout-header {
+    color: var(--color-info);
+  }
+  
+  .callout-warning {
+    background-color: #FEF3CD;
+    border-color: var(--color-warning);
+  }
+  
+  .callout-warning .callout-header {
+    color: #856404;
+  }
+  
+  @media (prefers-color-scheme: dark) {
+    .callout-info {
+      background-color: #1E2A33;
+    }
+    .callout-warning {
+      background-color: #332B00;
+    }
+  }
+  
+  .callout-header {
+    display: flex;
+    align-items: center;
+    gap: var(--space-sm);
+    font-weight: 600;
+    margin-bottom: var(--space-sm);
+  }
+  
+  .callout-content :global(p:last-child) {
+    margin-bottom: 0;
+  }
+</style>

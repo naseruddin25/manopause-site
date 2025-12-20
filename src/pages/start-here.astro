@@ -1,0 +1,764 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import SafetyCallout from '../components/SafetyCallout.astro';
+---
+
+<BaseLayout title="Start Here" description="A guided 2-3 minute assessment to help you understand what's happening and get personalized guidance.">
+  <section class="triage-hero">
+    <div class="container container-content">
+      <h1>Start Here</h1>
+      <p class="lead">Take 2-3 minutes to work through this guided assessment. Your answers will help you understand what's happening and get personalized next steps.</p>
+      
+      <SafetyCallout type="safety" title="Safety First">
+        <p>If you are in <strong>immediate physical danger</strong>, please call 911 or leave the situation if you can do so safely. This assessment is for educational purposes and cannot replace emergency services.</p>
+      </SafetyCallout>
+    </div>
+  </section>
+  
+  <section class="triage-flow section">
+    <div class="container container-content">
+      <!-- Step 1: Safety Check -->
+      <div class="triage-step" id="step-safety">
+        <div class="step-header">
+          <span class="step-number">1</span>
+          <h2>Quick Safety Check</h2>
+        </div>
+        <div class="step-content">
+          <p>Before we continue, let's make sure you're in a safe place to read this information.</p>
+          
+          <div class="safety-questions">
+            <div class="question-card">
+              <p class="question-text">Are you in immediate physical danger right now?</p>
+              <div class="question-actions">
+                <button class="btn btn-safety" onclick="showEmergencyGuidance()">Yes, I need help now</button>
+                <button class="btn btn-secondary" onclick="nextStep('step-situation')">No, I'm safe right now</button>
+              </div>
+            </div>
+          </div>
+          
+          <div id="emergency-guidance" class="emergency-box" style="display: none;">
+            <h3>Get to Safety</h3>
+            <ul>
+              <li><strong>Call 911</strong> if you're in immediate danger</li>
+              <li><strong>National Domestic Violence Hotline:</strong> 1-800-799-7233 (24/7)</li>
+              <li><strong>Text START to 88788</strong> for the Crisis Text Line</li>
+              <li>If you can leave safely, go to a trusted friend, family member, or public place</li>
+            </ul>
+            <a href="/get-help" class="btn btn-safety mt-md">View All Help Resources</a>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Step 2: What's Happening -->
+      <div class="triage-step" id="step-situation" style="display: none;">
+        <div class="step-header">
+          <span class="step-number">2</span>
+          <h2>What's Happening?</h2>
+        </div>
+        <div class="step-content">
+          <p>Select all that describe your situation. This helps us point you to the most relevant resources.</p>
+          
+          <div class="pattern-checklist">
+            <label class="pattern-option">
+              <input type="checkbox" name="patterns" value="accusations">
+              <span class="option-content">
+                <strong>Accusations & Suspicion</strong>
+                <span>Being constantly questioned, accused of lying, cheating, or having hidden motives</span>
+              </span>
+            </label>
+            
+            <label class="pattern-option">
+              <input type="checkbox" name="patterns" value="threats">
+              <span class="option-content">
+                <strong>Threats & Ultimatums</strong>
+                <span>Threats to leave, take children, harm themselves, expose secrets, or ruin your reputation</span>
+              </span>
+            </label>
+            
+            <label class="pattern-option">
+              <input type="checkbox" name="patterns" value="surveillance">
+              <span class="option-content">
+                <strong>Surveillance & Monitoring</strong>
+                <span>Tracking your location, checking your phone, demanding constant updates, using cameras</span>
+              </span>
+            </label>
+            
+            <label class="pattern-option">
+              <input type="checkbox" name="patterns" value="isolation">
+              <span class="option-content">
+                <strong>Isolation from Others</strong>
+                <span>Being cut off from family, friends, or support systems; discouraged from seeing people</span>
+              </span>
+            </label>
+            
+            <label class="pattern-option">
+              <input type="checkbox" name="patterns" value="scorekeeping">
+              <span class="option-content">
+                <strong>Scorekeeping & Guilt</strong>
+                <span>Past mistakes constantly brought up, nothing is ever forgiven, always owing something</span>
+              </span>
+            </label>
+            
+            <label class="pattern-option">
+              <input type="checkbox" name="patterns" value="stonewalling">
+              <span class="option-content">
+                <strong>Stonewalling & Silent Treatment</strong>
+                <span>Being ignored, refused conversation, punished with silence for days or weeks</span>
+              </span>
+            </label>
+            
+            <label class="pattern-option">
+              <input type="checkbox" name="patterns" value="volatility">
+              <span class="option-content">
+                <strong>Emotional Volatility</strong>
+                <span>Explosive anger, unpredictable mood swings, walking on eggshells</span>
+              </span>
+            </label>
+            
+            <label class="pattern-option">
+              <input type="checkbox" name="patterns" value="control">
+              <span class="option-content">
+                <strong>Control Over Daily Life</strong>
+                <span>Decisions about money, schedule, clothing, food, or activities being controlled</span>
+              </span>
+            </label>
+            
+            <label class="pattern-option">
+              <input type="checkbox" name="patterns" value="gaslighting">
+              <span class="option-content">
+                <strong>Reality Distortion</strong>
+                <span>Being told you're "crazy," memories denied, facts twisted, questioning your own perception</span>
+              </span>
+            </label>
+            
+            <label class="pattern-option">
+              <input type="checkbox" name="patterns" value="physical">
+              <span class="option-content">
+                <strong>Physical Intimidation or Violence</strong>
+                <span>Blocking exits, destroying property, throwing things, physical contact that causes fear or harm</span>
+              </span>
+            </label>
+          </div>
+          
+          <div class="step-actions">
+            <button class="btn btn-secondary" onclick="prevStep('step-safety')">Back</button>
+            <button class="btn btn-primary" onclick="nextStep('step-intensity')">Continue</button>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Step 3: Intensity Level -->
+      <div class="triage-step" id="step-intensity" style="display: none;">
+        <div class="step-header">
+          <span class="step-number">3</span>
+          <h2>How Intense Is It?</h2>
+        </div>
+        <div class="step-content">
+          <p>How would you describe the current intensity of what you're experiencing?</p>
+          
+          <div class="intensity-options">
+            <label class="intensity-option">
+              <input type="radio" name="intensity" value="low">
+              <span class="intensity-card">
+                <strong>Occasional Tension</strong>
+                <p>Happens sometimes but there are good periods. I can function day-to-day but something feels off.</p>
+              </span>
+            </label>
+            
+            <label class="intensity-option">
+              <input type="radio" name="intensity" value="moderate">
+              <span class="intensity-card">
+                <strong>Frequent & Draining</strong>
+                <p>Happens regularly. I'm often anxious, walking on eggshells, or exhausted. It's affecting my work, health, or other relationships.</p>
+              </span>
+            </label>
+            
+            <label class="intensity-option">
+              <input type="radio" name="intensity" value="high">
+              <span class="intensity-card">
+                <strong>Constant & Overwhelming</strong>
+                <p>Almost every day. I feel trapped, afraid, or hopeless. I'm not sure how much longer I can take this.</p>
+              </span>
+            </label>
+            
+            <label class="intensity-option">
+              <input type="radio" name="intensity" value="crisis">
+              <span class="intensity-card intensity-crisis">
+                <strong>Crisis Level</strong>
+                <p>Things are escalating fast. There's been recent violence, major threats, or I'm genuinely afraid for my safety or my children's safety.</p>
+              </span>
+            </label>
+          </div>
+          
+          <div class="step-actions">
+            <button class="btn btn-secondary" onclick="prevStep('step-situation')">Back</button>
+            <button class="btn btn-primary" onclick="showResults()">Get My Guidance</button>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Results Section -->
+      <div class="triage-results" id="results-section" style="display: none;">
+        <div class="results-header">
+          <h2>Your 24-Hour Plan</h2>
+          <p>Based on your responses, here are personalized next steps.</p>
+        </div>
+        
+        <div id="results-content">
+          <!-- Dynamically populated -->
+        </div>
+        
+        <div class="results-disclaimer">
+          <p><strong>Remember:</strong> This is educational guidance, not professional advice. Your situation is unique. Consider speaking with a counselor, advocate, or trusted person about what you're experiencing.</p>
+        </div>
+        
+        <div class="results-actions">
+          <a href="/learn/what-is-abuse" class="btn btn-secondary">Learn About Abuse Patterns</a>
+          <a href="/tools/de-escalation" class="btn btn-secondary">De-escalation Tools</a>
+          <a href="/tools/boundaries" class="btn btn-secondary">Boundary Scripts</a>
+          <a href="/get-help" class="btn btn-safety">Get Professional Help</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</BaseLayout>
+
+<script>
+  function showEmergencyGuidance() {
+    document.getElementById('emergency-guidance').style.display = 'block';
+  }
+  
+  function nextStep(stepId) {
+    // Hide all steps
+    document.querySelectorAll('.triage-step').forEach(step => {
+      step.style.display = 'none';
+    });
+    // Show target step
+    document.getElementById(stepId).style.display = 'block';
+    // Scroll to top of step
+    document.getElementById(stepId).scrollIntoView({ behavior: 'smooth', block: 'start' });
+  }
+  
+  function prevStep(stepId) {
+    nextStep(stepId);
+  }
+  
+  function showResults() {
+    // Hide all steps
+    document.querySelectorAll('.triage-step').forEach(step => {
+      step.style.display = 'none';
+    });
+    
+    // Get selected patterns
+    const patterns = Array.from(document.querySelectorAll('input[name="patterns"]:checked')).map(el => el.value);
+    const intensity = document.querySelector('input[name="intensity"]:checked')?.value || 'moderate';
+    
+    // Generate results
+    const resultsContent = document.getElementById('results-content');
+    resultsContent.innerHTML = generateResults(patterns, intensity);
+    
+    // Show results
+    document.getElementById('results-section').style.display = 'block';
+    document.getElementById('results-section').scrollIntoView({ behavior: 'smooth', block: 'start' });
+  }
+  
+  function generateResults(patterns, intensity) {
+    let html = '';
+    
+    // Intensity-based header
+    const intensityGuidance = {
+      low: {
+        title: 'Building Awareness',
+        message: 'You\'re noticing patterns early — that\'s important. This is a good time to educate yourself, set boundaries, and observe whether things improve or worsen.'
+      },
+      moderate: {
+        title: 'Taking Action',
+        message: 'What you\'re experiencing is significant and deserves attention. Focus on protecting your wellbeing, documenting patterns, and building support.'
+      },
+      high: {
+        title: 'Prioritizing Safety',
+        message: 'This level of intensity requires serious attention. Your safety and mental health come first. Consider reaching out to a professional advocate or counselor.'
+      },
+      crisis: {
+        title: 'Immediate Safety',
+        message: 'If you\'re in crisis, please reach out for support today. The National Domestic Violence Hotline (1-800-799-7233) has trained advocates available 24/7.'
+      }
+    };
+    
+    const guidance = intensityGuidance[intensity];
+    
+    html += `
+      <div class="result-card result-${intensity}">
+        <h3>${guidance.title}</h3>
+        <p>${guidance.message}</p>
+      </div>
+    `;
+    
+    // Pattern-specific guidance
+    html += '<h3 class="mt-xl">Based on Your Patterns</h3>';
+    html += '<div class="pattern-guidance-grid">';
+    
+    if (patterns.includes('accusations') || patterns.includes('gaslighting')) {
+      html += `
+        <div class="guidance-card">
+          <h4>Reality & Trust Issues</h4>
+          <p>When your perception is constantly questioned, it's destabilizing. Start keeping private notes of events as they happen — not to prove anything, but to anchor your own experience.</p>
+          <a href="/tools/documentation">Learn Documentation →</a>
+        </div>
+      `;
+    }
+    
+    if (patterns.includes('threats')) {
+      html += `
+        <div class="guidance-card">
+          <h4>Threats & Ultimatums</h4>
+          <p>Threats are a form of control. Don't make major decisions under pressure. Know that threats often escalate — document them and consider talking to a professional.</p>
+          <a href="/learn/patterns#threats">Understanding Threats →</a>
+        </div>
+      `;
+    }
+    
+    if (patterns.includes('surveillance')) {
+      html += `
+        <div class="guidance-card">
+          <h4>Digital Safety</h4>
+          <p>If your devices or location are being monitored, your privacy is compromised. Learn how to check for tracking and protect your communications.</p>
+          <a href="/tools/digital-safety">Digital Safety Guide →</a>
+        </div>
+      `;
+    }
+    
+    if (patterns.includes('isolation')) {
+      html += `
+        <div class="guidance-card">
+          <h4>Rebuilding Connection</h4>
+          <p>Isolation is dangerous. Even one trusted person outside your home can make a huge difference. Think about who you might safely reach out to.</p>
+          <a href="/for-families">For Family & Supporters →</a>
+        </div>
+      `;
+    }
+    
+    if (patterns.includes('volatility') || patterns.includes('stonewalling')) {
+      html += `
+        <div class="guidance-card">
+          <h4>Managing Difficult Moments</h4>
+          <p>When emotions are high (theirs or yours), de-escalation techniques can help reduce harm. The goal is safety, not winning.</p>
+          <a href="/tools/de-escalation">De-escalation Toolkit →</a>
+        </div>
+      `;
+    }
+    
+    if (patterns.includes('physical')) {
+      html += `
+        <div class="guidance-card guidance-urgent">
+          <h4>Physical Safety</h4>
+          <p>Physical intimidation or violence is serious. Please consider speaking with a domestic violence advocate who can help you assess your safety and options.</p>
+          <a href="/get-help">Get Help Now →</a>
+        </div>
+      `;
+    }
+    
+    if (patterns.length === 0) {
+      html += `
+        <div class="guidance-card">
+          <h4>Still Uncertain?</h4>
+          <p>Even if you didn't check any boxes, the fact that you're here suggests something doesn't feel right. Trust that instinct and explore our educational resources.</p>
+          <a href="/learn/what-is-abuse">What Is Abuse? →</a>
+        </div>
+      `;
+    }
+    
+    html += '</div>';
+    
+    // 24-hour action items
+    html += `
+      <h3 class="mt-xl">Your 24-Hour Action Items</h3>
+      <div class="action-list">
+        <div class="action-item">
+          <span class="action-number">1</span>
+          <div class="action-content">
+            <strong>Ground yourself</strong>
+            <p>Take 3 deep breaths. Remind yourself: "I am not crazy. What I'm experiencing matters."</p>
+          </div>
+        </div>
+        <div class="action-item">
+          <span class="action-number">2</span>
+          <div class="action-content">
+            <strong>Document one thing</strong>
+            <p>Write down one recent incident with date, time, and what happened. Keep it somewhere private.</p>
+          </div>
+        </div>
+        <div class="action-item">
+          <span class="action-number">3</span>
+          <div class="action-content">
+            <strong>Read one resource</strong>
+            <p>Pick one link from the guidance above that resonates most with your situation.</p>
+          </div>
+        </div>
+        <div class="action-item">
+          <span class="action-number">4</span>
+          <div class="action-content">
+            <strong>Identify one person</strong>
+            <p>Think of one person you could talk to — even if you're not ready to reach out yet.</p>
+          </div>
+        </div>
+      </div>
+    `;
+    
+    return html;
+  }
+</script>
+
+<style>
+  .triage-hero {
+    background-color: var(--color-bg-alt);
+    padding: var(--space-3xl) 0;
+    border-bottom: 1px solid var(--color-border-light);
+  }
+  
+  .triage-hero h1 {
+    margin-bottom: var(--space-md);
+  }
+  
+  .lead {
+    font-size: var(--text-lg);
+    color: var(--color-text-light);
+    max-width: 600px;
+  }
+  
+  .triage-step {
+    margin-bottom: var(--space-3xl);
+  }
+  
+  .step-header {
+    display: flex;
+    align-items: center;
+    gap: var(--space-md);
+    margin-bottom: var(--space-xl);
+  }
+  
+  .step-number {
+    width: 40px;
+    height: 40px;
+    background-color: var(--color-primary);
+    color: white;
+    border-radius: var(--radius-full);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+    font-size: var(--text-lg);
+  }
+  
+  .step-header h2 {
+    margin: 0;
+    font-size: var(--text-2xl);
+  }
+  
+  .question-card {
+    background-color: var(--color-bg-card);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-lg);
+    padding: var(--space-xl);
+    text-align: center;
+  }
+  
+  .question-text {
+    font-size: var(--text-lg);
+    font-weight: 500;
+    margin-bottom: var(--space-lg);
+  }
+  
+  .question-actions {
+    display: flex;
+    gap: var(--space-md);
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  
+  .emergency-box {
+    background-color: var(--color-safety-light);
+    border: 2px solid var(--color-safety);
+    border-radius: var(--radius-lg);
+    padding: var(--space-xl);
+    margin-top: var(--space-xl);
+  }
+  
+  .emergency-box h3 {
+    color: var(--color-safety);
+    margin-bottom: var(--space-md);
+  }
+  
+  .emergency-box ul {
+    margin-bottom: var(--space-md);
+  }
+  
+  /* Pattern Checklist */
+  .pattern-checklist {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-md);
+    margin: var(--space-xl) 0;
+  }
+  
+  .pattern-option {
+    display: flex;
+    align-items: flex-start;
+    gap: var(--space-md);
+    padding: var(--space-md);
+    background-color: var(--color-bg-card);
+    border: 2px solid var(--color-border-light);
+    border-radius: var(--radius-md);
+    cursor: pointer;
+    transition: all var(--transition-fast);
+  }
+  
+  .pattern-option:hover {
+    border-color: var(--color-primary);
+  }
+  
+  .pattern-option input {
+    margin-top: 4px;
+    width: 20px;
+    height: 20px;
+    accent-color: var(--color-primary);
+  }
+  
+  .pattern-option input:checked + .option-content strong {
+    color: var(--color-primary);
+  }
+  
+  .option-content {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-xs);
+  }
+  
+  .option-content strong {
+    font-size: var(--text-base);
+  }
+  
+  .option-content span {
+    font-size: var(--text-sm);
+    color: var(--color-text-light);
+  }
+  
+  /* Intensity Options */
+  .intensity-options {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-md);
+    margin: var(--space-xl) 0;
+  }
+  
+  .intensity-option {
+    cursor: pointer;
+  }
+  
+  .intensity-option input {
+    position: absolute;
+    opacity: 0;
+  }
+  
+  .intensity-card {
+    display: block;
+    padding: var(--space-lg);
+    background-color: var(--color-bg-card);
+    border: 2px solid var(--color-border-light);
+    border-radius: var(--radius-md);
+    transition: all var(--transition-fast);
+  }
+  
+  .intensity-option:hover .intensity-card {
+    border-color: var(--color-primary);
+  }
+  
+  .intensity-option input:checked + .intensity-card {
+    border-color: var(--color-primary);
+    background-color: color-mix(in srgb, var(--color-primary) 5%, white);
+  }
+  
+  .intensity-card strong {
+    display: block;
+    font-size: var(--text-lg);
+    margin-bottom: var(--space-sm);
+  }
+  
+  .intensity-card p {
+    font-size: var(--text-sm);
+    color: var(--color-text-light);
+    margin: 0;
+  }
+  
+  .intensity-crisis {
+    border-color: var(--color-safety);
+  }
+  
+  .intensity-option input:checked + .intensity-crisis {
+    background-color: var(--color-safety-light);
+  }
+  
+  /* Step Actions */
+  .step-actions {
+    display: flex;
+    gap: var(--space-md);
+    margin-top: var(--space-xl);
+  }
+  
+  /* Results */
+  .results-header {
+    text-align: center;
+    margin-bottom: var(--space-2xl);
+  }
+  
+  .results-header h2 {
+    margin-bottom: var(--space-sm);
+  }
+  
+  .result-card {
+    padding: var(--space-xl);
+    border-radius: var(--radius-lg);
+    margin-bottom: var(--space-xl);
+  }
+  
+  .result-low {
+    background-color: #E8F0F5;
+    border: 1px solid var(--color-info);
+  }
+  
+  .result-moderate {
+    background-color: #FEF3CD;
+    border: 1px solid var(--color-warning);
+  }
+  
+  .result-high {
+    background-color: #FFE4D6;
+    border: 1px solid var(--color-accent);
+  }
+  
+  .result-crisis {
+    background-color: var(--color-safety-light);
+    border: 2px solid var(--color-safety);
+  }
+  
+  .result-card h3 {
+    margin-bottom: var(--space-sm);
+  }
+  
+  .result-card p {
+    margin: 0;
+  }
+  
+  .pattern-guidance-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: var(--space-lg);
+    margin-top: var(--space-lg);
+  }
+  
+  .guidance-card {
+    background-color: var(--color-bg-card);
+    border: 1px solid var(--color-border-light);
+    border-radius: var(--radius-md);
+    padding: var(--space-lg);
+  }
+  
+  .guidance-card h4 {
+    font-size: var(--text-base);
+    margin-bottom: var(--space-sm);
+  }
+  
+  .guidance-card p {
+    font-size: var(--text-sm);
+    color: var(--color-text-light);
+    margin-bottom: var(--space-md);
+  }
+  
+  .guidance-card a {
+    font-size: var(--text-sm);
+    font-weight: 500;
+  }
+  
+  .guidance-urgent {
+    border-color: var(--color-safety);
+    background-color: var(--color-safety-light);
+  }
+  
+  /* Action List */
+  .action-list {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-md);
+    margin-top: var(--space-lg);
+  }
+  
+  .action-item {
+    display: flex;
+    gap: var(--space-md);
+    padding: var(--space-md);
+    background-color: var(--color-bg-alt);
+    border-radius: var(--radius-md);
+  }
+  
+  .action-number {
+    width: 32px;
+    height: 32px;
+    background-color: var(--color-primary);
+    color: white;
+    border-radius: var(--radius-full);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+    flex-shrink: 0;
+  }
+  
+  .action-content strong {
+    display: block;
+    margin-bottom: var(--space-xs);
+  }
+  
+  .action-content p {
+    font-size: var(--text-sm);
+    color: var(--color-text-light);
+    margin: 0;
+  }
+  
+  .results-disclaimer {
+    background-color: var(--color-bg-alt);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-md);
+    padding: var(--space-lg);
+    margin: var(--space-2xl) 0;
+  }
+  
+  .results-disclaimer p {
+    font-size: var(--text-sm);
+    margin: 0;
+  }
+  
+  .results-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-md);
+    justify-content: center;
+  }
+  
+  @media (max-width: 640px) {
+    .question-actions {
+      flex-direction: column;
+    }
+    
+    .step-actions {
+      flex-direction: column;
+    }
+    
+    .results-actions {
+      flex-direction: column;
+    }
+    
+    .results-actions .btn {
+      width: 100%;
+    }
+  }
+</style>

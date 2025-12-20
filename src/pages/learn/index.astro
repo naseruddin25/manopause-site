@@ -1,0 +1,456 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+---
+
+<BaseLayout 
+  title="Learn | Manopause"
+  description="Educational resources to understand relationship conflict, abuse, trauma responses, and how to build healthier patterns."
+>
+  <main class="learn-page">
+    <!-- Hero Section -->
+    <section class="hero">
+      <div class="container">
+        <h1>Learn</h1>
+        <p class="subtitle">
+          Understanding is the first step toward change. Explore research-backed 
+          information about relationship patterns, trauma, and the path to healthier dynamics.
+        </p>
+      </div>
+    </section>
+
+    <div class="container content-wrapper">
+      
+      <!-- Introduction -->
+      <section class="intro">
+        <p>
+          When you're in the middle of relationship conflict, it can be hard to see 
+          clearly. These educational resources are designed to help you understand 
+          what's happening, why patterns repeat, and what options you have.
+        </p>
+        <p>
+          Take your time. There's no rush. Read what feels relevant to you right now.
+        </p>
+      </section>
+
+      <!-- Article Grid -->
+      <section class="article-grid">
+        
+        <a href="/learn/what-is-abuse" class="article-card">
+          <div class="article-icon">⚠️</div>
+          <div class="article-content">
+            <h2>What Is Abuse?</h2>
+            <p class="read-time">8 min read</p>
+            <p class="description">
+              Abuse isn't just physical. Learn about emotional, psychological, and 
+              coercive control — and how to distinguish unhealthy conflict from abuse.
+            </p>
+            <span class="learn-more">Read article →</span>
+          </div>
+        </a>
+
+        <a href="/learn/trauma-responses" class="article-card">
+          <div class="article-icon">🧠</div>
+          <div class="article-content">
+            <h2>Trauma & Stress Responses</h2>
+            <p class="read-time">12 min read</p>
+            <p class="description">
+              Fight, flight, freeze, fawn — how your nervous system responds to threat, 
+              and why understanding this helps you respond more intentionally.
+            </p>
+            <span class="learn-more">Read article →</span>
+          </div>
+        </a>
+
+        <a href="/learn/patterns" class="article-card">
+          <div class="article-icon">🔄</div>
+          <div class="article-content">
+            <h2>Patterns Library</h2>
+            <p class="read-time">20 min read</p>
+            <p class="description">
+              A comprehensive guide to recognizing harmful relationship patterns — from 
+              accusations and monitoring to isolation and financial control.
+            </p>
+            <span class="learn-more">Explore patterns →</span>
+          </div>
+        </a>
+
+        <a href="/learn/hormones" class="article-card">
+          <div class="article-icon">⚗️</div>
+          <div class="article-content">
+            <h2>Hormones & Behavior</h2>
+            <p class="read-time">16 min read</p>
+            <p class="description">
+              How hormonal changes in both men and women can affect mood, behavior, and 
+              relationships — and when to consider medical evaluation.
+            </p>
+            <span class="learn-more">Read article →</span>
+          </div>
+        </a>
+
+      </section>
+
+      <!-- Quick Distinctions -->
+      <section class="quick-info">
+        <h2>Quick Distinctions</h2>
+        
+        <div class="distinction-grid">
+          <div class="distinction-card">
+            <h3>Normal Conflict vs. Abuse</h3>
+            <div class="comparison">
+              <div class="side normal">
+                <h4>Normal Conflict</h4>
+                <ul>
+                  <li>Both people can express concerns</li>
+                  <li>Disagreements get resolved</li>
+                  <li>Respect remains even when upset</li>
+                  <li>You feel safe to disagree</li>
+                </ul>
+              </div>
+              <div class="side concern">
+                <h4>Concerning Patterns</h4>
+                <ul>
+                  <li>One person dominates discussions</li>
+                  <li>Same issues cycle without resolution</li>
+                  <li>Contempt, control, or intimidation</li>
+                  <li>Fear prevents honest expression</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="distinction-card">
+            <h3>Explanation vs. Excuse</h3>
+            <p>
+              Understanding why someone behaves a certain way (stress, hormones, trauma) 
+              is not the same as excusing harmful behavior. Reasons help us understand; 
+              they don't remove responsibility.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Navigation Help -->
+      <section class="nav-help">
+        <h2>Where Should I Start?</h2>
+        
+        <div class="help-grid">
+          <div class="help-card">
+            <h3>I'm not sure what's happening</h3>
+            <p>Start with <a href="/start-here">the assessment</a> to get personalized guidance.</p>
+          </div>
+
+          <div class="help-card">
+            <h3>I think I might be experiencing abuse</h3>
+            <p>Read <a href="/learn/what-is-abuse">What Is Abuse?</a> to understand the patterns.</p>
+          </div>
+
+          <div class="help-card">
+            <h3>I'm constantly on edge</h3>
+            <p>Explore <a href="/learn/trauma-responses">Trauma & Stress Responses</a> to understand why.</p>
+          </div>
+
+          <div class="help-card">
+            <h3>I need practical help now</h3>
+            <p>Check out our <a href="/tools">Tools section</a> for actionable strategies.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Disclaimer -->
+      <section class="disclaimer-section">
+        <h2>A Note on This Content</h2>
+        <p>
+          All content in this section is educational and based on research from reputable 
+          sources including the CDC, National Domestic Violence Hotline, and peer-reviewed 
+          research. We summarize findings in plain language and encourage you to explore 
+          our <a href="/references">References page</a> for sources.
+        </p>
+        <p>
+          This information is not a substitute for professional help. If you need support, 
+          please reach out to a qualified professional or contact a <a href="/get-help">crisis resource</a>.
+        </p>
+      </section>
+
+    </div>
+  </main>
+</BaseLayout>
+
+<style>
+  .learn-page {
+    --primary: #2563eb;
+    --secondary: #7c3aed;
+  }
+
+  .hero {
+    background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+    color: white;
+    padding: 4rem 1rem;
+    text-align: center;
+  }
+
+  .container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 1rem;
+  }
+
+  .hero h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    font-weight: 700;
+  }
+
+  .subtitle {
+    font-size: 1.25rem;
+    opacity: 0.9;
+    max-width: 700px;
+    margin: 0 auto;
+    line-height: 1.6;
+  }
+
+  .content-wrapper {
+    padding: 3rem 1rem;
+  }
+
+  .intro {
+    margin-bottom: 3rem;
+    text-align: center;
+  }
+
+  .intro p {
+    color: #475569;
+    line-height: 1.8;
+    max-width: 700px;
+    margin: 0 auto 1rem;
+    font-size: 1.1rem;
+  }
+
+  /* Article Grid */
+  .article-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 4rem;
+  }
+
+  .article-card {
+    display: flex;
+    gap: 1.25rem;
+    background: white;
+    padding: 1.75rem;
+    border-radius: 1rem;
+    border: 1px solid #e2e8f0;
+    text-decoration: none;
+    transition: transform 0.2s, box-shadow 0.2s, border-color 0.2s;
+  }
+
+  .article-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    border-color: var(--primary);
+  }
+
+  .article-icon {
+    font-size: 2.5rem;
+    flex-shrink: 0;
+  }
+
+  .article-content h2 {
+    color: #1e293b;
+    font-size: 1.25rem;
+    margin-bottom: 0.25rem;
+  }
+
+  .read-time {
+    color: var(--primary);
+    font-size: 0.85rem;
+    font-weight: 500;
+    margin-bottom: 0.75rem;
+  }
+
+  .description {
+    color: #64748b;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin-bottom: 1rem;
+  }
+
+  .learn-more {
+    color: var(--primary);
+    font-weight: 500;
+    font-size: 0.9rem;
+  }
+
+  /* Quick Info */
+  .quick-info {
+    margin-bottom: 4rem;
+  }
+
+  .quick-info h2 {
+    font-size: 1.5rem;
+    color: #1e293b;
+    margin-bottom: 1.5rem;
+    text-align: center;
+  }
+
+  .distinction-grid {
+    display: grid;
+    gap: 1.5rem;
+  }
+
+  .distinction-card {
+    background: #f8fafc;
+    padding: 1.75rem;
+    border-radius: 1rem;
+    border: 1px solid #e2e8f0;
+  }
+
+  .distinction-card h3 {
+    color: #1e293b;
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+  }
+
+  .distinction-card > p {
+    color: #475569;
+    line-height: 1.7;
+    margin: 0;
+  }
+
+  .comparison {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+  }
+
+  .side {
+    padding: 1rem;
+    border-radius: 0.5rem;
+  }
+
+  .side.normal {
+    background: #ecfdf5;
+    border: 1px solid #a7f3d0;
+  }
+
+  .side.concern {
+    background: #fef2f2;
+    border: 1px solid #fecaca;
+  }
+
+  .side h4 {
+    font-size: 0.9rem;
+    margin-bottom: 0.75rem;
+    font-weight: 600;
+  }
+
+  .side.normal h4 { color: #065f46; }
+  .side.concern h4 { color: #991b1b; }
+
+  .side ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .side li {
+    font-size: 0.9rem;
+    padding: 0.25rem 0;
+    line-height: 1.5;
+  }
+
+  .side.normal li { color: #047857; }
+  .side.concern li { color: #b91c1c; }
+
+  /* Nav Help */
+  .nav-help {
+    margin-bottom: 4rem;
+  }
+
+  .nav-help h2 {
+    font-size: 1.5rem;
+    color: #1e293b;
+    margin-bottom: 1.5rem;
+    text-align: center;
+  }
+
+  .help-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1rem;
+  }
+
+  .help-card {
+    background: white;
+    padding: 1.25rem;
+    border-radius: 0.75rem;
+    border: 1px solid #e2e8f0;
+  }
+
+  .help-card h3 {
+    color: #334155;
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .help-card p {
+    color: #64748b;
+    font-size: 0.9rem;
+    margin: 0;
+    line-height: 1.5;
+  }
+
+  .help-card a {
+    color: var(--primary);
+    font-weight: 500;
+  }
+
+  /* Disclaimer */
+  .disclaimer-section {
+    background: #fffbeb;
+    border: 1px solid #fcd34d;
+    border-radius: 1rem;
+    padding: 2rem;
+  }
+
+  .disclaimer-section h2 {
+    color: #92400e;
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+  }
+
+  .disclaimer-section p {
+    color: #a16207;
+    line-height: 1.7;
+    margin-bottom: 0.75rem;
+    font-size: 0.95rem;
+  }
+
+  .disclaimer-section p:last-child {
+    margin-bottom: 0;
+  }
+
+  .disclaimer-section a {
+    color: #b45309;
+    font-weight: 500;
+  }
+
+  @media (max-width: 768px) {
+    .hero h1 {
+      font-size: 2.5rem;
+    }
+
+    .article-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .article-card {
+      flex-direction: column;
+      text-align: center;
+    }
+
+    .comparison {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>
